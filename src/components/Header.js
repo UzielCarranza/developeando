@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import {typeWriter} from "../utils/type-writer";
+import "../styles/callToAction.css";
 
 export const CallToAction = () => {
 
