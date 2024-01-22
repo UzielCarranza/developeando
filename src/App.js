@@ -2,6 +2,8 @@ import {NavBar} from "./components/NavBar";
 import {CallToAction} from "./components/Header";
 import {AboutMe} from "./components/AboutMe";
 import {JobExperience} from "./components/JobExperience";
+import {Projects} from "./components/Projects";
+import {Footer} from "./components/Footer";
 
 function App() {
   return (
@@ -9,7 +11,9 @@ function App() {
       <NavBar/>
         <CallToAction/>
         <AboutMe/>
-      <JobExperience/>
+         <JobExperience/>
+        <Projects/>
+        <Footer/>
     </div>
   );
 }
