@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+        <Navbar id="navbar" collapseOnSelect expand="lg" className="bg-body-tertiary" sticky="top" >
             <Container>
                 <Navbar.Brand href="#nav-bar">Uziel Carranza Charro</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
