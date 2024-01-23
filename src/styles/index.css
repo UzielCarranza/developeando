@@ -8,7 +8,7 @@ https://imagecolorpicker.com/en
 :root
 {
     --main-bg-color: #000;
-    --main-title-font-color: #c7493a;
+    --main-title-font-color: #fe4431;
     --main--text-font-color: #EDF5E1;
     --colo1: #5CDB95;
     --color2: #907163;
@@ -21,6 +21,9 @@ body{
     color: var(--main--text-font-color) !important;
 }
 
+/*
+NAVBAR
+*/
 #navbar{
     background-color: var(--main-bg-color) !important;
 }
@@ -32,7 +35,25 @@ body{
     background-color: var(--main--text-font-color) !important;
 }
 
+/*
+HERO
+*/
+#hero-intro{
+    height: 100vh;
+}
 
-/*body *{*/
-/*    outline: 1px solid #fff;*/
-/*}*/
+#type-writer, #cursor{
+    color: var(--main-title-font-color) !important;
+}
+.btn-app{
+    background-color: var(--main-title-font-color) !important;
+    color: var(--main--text-font-color) !important;
+}
+
+.subtitle-header{
+    color: var(--grey);
+}
+
+/*
+ABOUT
+*/
