@@ -1,0 +1,38 @@
+
+/*
+reference:  color palette
+https://visme.co/blog/website-color-schemes/
+https://imagecolorpicker.com/en
+*/
+
+:root
+{
+    --main-bg-color: #000;
+    --main-title-font-color: #c7493a;
+    --main--text-font-color: #EDF5E1;
+    --colo1: #5CDB95;
+    --color2: #907163;
+    --color3: #379683;
+    --grey: #9C9C9C;
+}
+
+body{
+    background-color: var(--main-bg-color) !important;
+    color: var(--main--text-font-color) !important;
+}
+
+#navbar{
+    background-color: var(--main-bg-color) !important;
+}
+#navbar .navbar-brand, #navbar .nav-link{
+    color: var(--main--text-font-color) !important;
+}
+
+#navbar .navbar-toggler{
+    background-color: var(--main--text-font-color) !important;
+}
+
+
+/*body *{*/
+/*    outline: 1px solid #fff;*/
+/*}*/
