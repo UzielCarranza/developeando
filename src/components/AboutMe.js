@@ -1,27 +1,33 @@
 import {Card, Container, ListGroup} from "react-bootstrap";
 
+const frontendTechnologies = () => ["JavaScript (ES6+)", "React", "Bootstrap", "Linux"];
+const backendTechnologies = () => [ "Java", "SpringBoot", "PHP", "MySQL"];
 export const AboutMe = () => {
     return (
-        <Container id={"about-me"}>
-            <Card style={{ width: '100%' }}>
+        <Container id={"about-section"} className="d-flex flex-column justify-content-md-center">
+            <Card className="w-100 h-50 bg-black text-white">
                 <Card.Body>
-                    <Card.Title>About Me</Card.Title>
+                    <Card.Title className="display-4">About Me</Card.Title>
                     <Card.Text>
-                        Hello! my name is Uziel and I enjoy building things on the internet!
+                        As a child, I was always curious about how programs worked. I used to spend time "opening" my video games and laptops to fix them. This curiosity transitioned well into programming, where anytime I am interested in something, I break it until I figure out how it works.
+                        Combining a background in military service with a deep commitment to accessibility and inclusivity,
+                        I bring a distinctive blend of discipline and determination to the tech landscape.
+                        My diverse experiences fuel my ability to engineer innovative and influential software solutions,
+                        and I am enthusiastic about contributing my skills and expertise to make a positive impact in society.
                     </Card.Text>
 
-                    <div className={"d-flex flex-row align-content-between justify-content-between w-50"}>
-                        <ListGroup className="list-group-flush">
-                            <ListGroup.Item>JavaScript (ES6+)</ListGroup.Item>
-                            <ListGroup.Item>React</ListGroup.Item>
-                            <ListGroup.Item>Bootstrap</ListGroup.Item>
-                            <ListGroup.Item>Linux</ListGroup.Item>
+                    <div className="d-flex flex-column align-content-between justify-content-between w-100 bg-black">
+
+                        <ListGroup className="d-flex flex-row flex-wrap justify-content-between justify-content-md-center border-black" >
+                            {frontendTechnologies().map((tech, index) => (
+                                <ListGroup.Item key={index} className="bg-black text-white border-black"><span className="main-title-color">{"</"}</span>{tech}<span className="main-title-color">{">"}</span></ListGroup.Item>
+                            ))}
                         </ListGroup>
-                        <ListGroup className="list-group-flush">
-                            <ListGroup.Item>Java</ListGroup.Item>
-                            <ListGroup.Item>SpringBoot</ListGroup.Item>
-                            <ListGroup.Item>PHP</ListGroup.Item>
-                            <ListGroup.Item>MySQL</ListGroup.Item>
+
+                        <ListGroup className="d-flex flex-row flex-wrap justify-content-between justify-content-md-center" >
+                            {backendTechnologies().map((tech, index) => (
+                                <ListGroup.Item key={index} className="bg-black text-white border-black"><span className="main-title-color">{"</"}</span>{tech}<span className="main-title-color">{">"}</span></ListGroup.Item>
+                            ))}
                         </ListGroup>
                     </div>
                 </Card.Body>
