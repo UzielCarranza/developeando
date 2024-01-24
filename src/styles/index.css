@@ -50,6 +50,10 @@ HERO
     color: var(--main--text-font-color) !important;
 }
 
+.main-title-color{
+    color: var(--main-title-font-color) !important;
+}
+
 .subtitle-header{
     color: var(--grey);
 }
@@ -57,3 +61,8 @@ HERO
 /*
 ABOUT
 */
+
+#about-section{
+    height: 100vh;
+    padding-top: 2.5em;
+}
