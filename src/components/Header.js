@@ -26,7 +26,7 @@ export const CallToAction = () => {
                 </p>
                 <p>
                     I am currently working on migrating a website to newer technologies and (designs)!! checkout
-                    <a href="https://www.hoseandfittings.com" className="p-2" target="_blank">
+                    <a href="https://www.hoseandfittings.com" className="p-2" target="_blank" rel="noreferrer">
                         HoseAndFittings.com
                     </a>
                 </p>
