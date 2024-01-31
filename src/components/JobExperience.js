@@ -1,48 +1,71 @@
-import {Card, Container} from "react-bootstrap";
+import React from 'react';
+import {Tab, Nav, Col, Row, Card, Container} from 'react-bootstrap';
 
-import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import Row from 'react-bootstrap/Row';
-import Tab from 'react-bootstrap/Tab';
-
-const renderExperienceAsPills = () => {
-        return (
-            <Tab.Container id="job-tabs" defaultActiveKey="first">
-                <Row>
-                    <Col sm={3}>
-                        <Nav variant="pills" className="flex-column">
-                            <Nav.Item>
-                                <Nav.Link eventKey="first">Power Components Corporation</Nav.Link>
+const JobList = ({ jobs }) => {
+    return (
+        <Tab.Container id="job-tabs" defaultActiveKey="job1">
+            <Row>
+                <Col sm={3}>
+                    <Nav variant="pills" className="flex-column">
+                        {jobs.map((job, index) => (
+                            <Nav.Item key={index}>
+                                <Nav.Link eventKey={`job${index + 1}`}>{job.title}</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="second">Creative Oddysey</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="third">PGIP-Tech</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                    </Col>
-                    <Col sm={9}>
-                        <Tab.Content>
-                            <Tab.Pane eventKey="first">Content for power components job experience</Tab.Pane>
-                            <Tab.Pane eventKey="second">Content for creative oddysey</Tab.Pane>
-                            <Tab.Pane eventKey="third">Content for PGIP-Tech</Tab.Pane>
-                        </Tab.Content>
-                    </Col>
-                </Row>
-            </Tab.Container>
-        );
-}
+                        ))}
+                    </Nav>
+                </Col>
+                <Col sm={9}>
+                    <Tab.Content>
+                        {jobs.map((job, index) => (
+                            <Tab.Pane key={index} eventKey={`job${index + 1}`}>
+                                <h5>{job.title}</h5>
+                                <p>{job.role}</p>
+                                <ul>
+                                    {job.description.map((point, i) => (
+                                        <li key={i}>{point}</li>
+                                    ))}
+                                </ul>
+                            </Tab.Pane>
+                        ))}
+                    </Tab.Content>
+                </Col>
+            </Row>
+        </Tab.Container>
+    );
+};
 
 export const JobExperience = () => {
+    const jobsDescription = [
+        {
+            title: "Power Components Corporation",
+            role: "Software Developer",
+            description: [
+                "Part of a team that migrated 70% of company website from Perl to PHP, resulting in a 30% improvement in loading times and ensuring a seamless transition for stakeholders, with an anticipated 50% increase in user engagement.",
+                "Identified and optimized inefficient workflows during the migration, improving overall system performance and ensuring a more optimized and streamlined website",
+                "Integrated a credit card payment system into the backend using PHP, streamlining financial transactions and improving overall system functionality.",
+            ]
+        },
+        {
+            title: "PGIP-Tech",
+            role: "Lead Software Developer Intern",
+            description: [
+                "Mentored and supervised a team of 4 software developer interns, guiding them to achieve goals.",
+                "Optimized workflow by effectively allocating coding tasks, ensuring timely project milestones",
+                "Conducted scrum team meetings to enhance project management and on-time code delivery.",
+                "Demonstrated Java proficiency through the development of a creative terminal-based game application."
+            ]
+        }
+    ];
     return (
-        <Container id={"experience-section"}>
-            <Card style={{ width: '100%' }}>
+    <Container id={"experience-section"} >
+        <Col xs={12} lg={8}>
+            <Card >
                 <Card.Body>
                     <Card.Title>Places I've Worked</Card.Title>
-                    {renderExperienceAsPills()}
+                    <JobList jobs={jobsDescription} />
                 </Card.Body>
             </Card>
-        </Container>
+        </Col>
+    </Container>
     );
-}
+};
