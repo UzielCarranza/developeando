@@ -4,17 +4,18 @@ import {AboutMe} from "./components/AboutMe";
 import {JobExperience} from "./components/JobExperience";
 import {Projects} from "./components/Projects";
 import {Footer} from "./components/Footer";
+import "../src/styles/index.css";
 
 function App() {
   return (
-    <div className="App">
+    <main className="app-content">
       <NavBar/>
         <CallToAction/>
         <AboutMe/>
          <JobExperience/>
         <Projects/>
         <Footer/>
-    </div>
+    </main>
   );
 }
 
