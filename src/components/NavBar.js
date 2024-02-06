@@ -12,7 +12,6 @@ export const NavBar = () => {
                     <Nav id={"nav-bar"}>
                         <Nav.Link href="#about-section">About</Nav.Link>
                         <Nav.Link href="#experience-section">Experience</Nav.Link>
-                        <Nav.Link href="#projects-section">Projects</Nav.Link>
                         <Nav.Link href="#contact-section">Contact</Nav.Link>
                         <Nav.Link href="#resume">Resume</Nav.Link>
                     </Nav>
