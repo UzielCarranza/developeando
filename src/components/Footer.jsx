@@ -4,7 +4,7 @@ import {SocialMedia} from "./SocialMedia";
 
 export const Footer = () => {
     return (
-        <footer className="mt-5">
+        <footer className="mt-5" id="contact-section">
             <Container>
                 <Row>
                     <Col md={12}>
