@@ -24,7 +24,7 @@ export const SocialMedia = () => {
         <ListGroup horizontal>
             {socialMedias.map((element, index) =>
                 renderListGroupItem({ ...element}, index)
-            )}Soc
+            )}
         </ListGroup>
     );
 };
