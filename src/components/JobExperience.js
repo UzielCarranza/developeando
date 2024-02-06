@@ -9,7 +9,7 @@ const JobList = ({ jobs }) => {
                     <Nav variant="pills" className="flex-column">
                         {jobs.map((job, index) => (
                             <Nav.Item key={index}>
-                                <Nav.Link eventKey={`job${index + 1}`}>{job.title}</Nav.Link>
+                                <Nav.Link className="text-white" eventKey={`job${index + 1}`}>{job.title}</Nav.Link>
                             </Nav.Item>
                         ))}
                     </Nav>
@@ -59,7 +59,7 @@ export const JobExperience = () => {
     return (
     <Container id={"experience-section"} >
         <Col xs={12} lg={8}>
-            <Card >
+            <Card className="bg-black text-white">
                 <Card.Body>
                     <Card.Title>Places I've Worked</Card.Title>
                     <JobList jobs={jobsDescription} />
