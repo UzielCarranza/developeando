@@ -1,14 +1,30 @@
-import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
-import {FaXTwitter} from "react-icons/fa6";
+import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 import {ListGroup} from "react-bootstrap";
+
+const socialMedias = [
+    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/uziel-carranza-charro/' },
+    { icon: <FaGithub />, link: 'https://github.com/UzielCarranza' },
+    { icon: <FaTwitter />, link: 'https://twitter.com/' }
+];
+
+const renderListGroupItem = (jsxElement, index) => (
+    <ListGroup.Item
+        key={index}
+        style={{ paddingLeft: 0 }}
+        className="border-0 bg-black text-white"
+    >
+        <a href={jsxElement.link} target="_blank" rel="noopener noreferrer" className="text-white">
+            {jsxElement.icon}
+        </a>
+    </ListGroup.Item>
+);
 
 export const SocialMedia = () => {
     return (
-            <ListGroup horizontal>
-                <ListGroup.Item style={{paddingLeft: 0}} className="border-0"><FaLinkedin /></ListGroup.Item>
-                <ListGroup.Item className="border-0 pl-0"><FaGithub /></ListGroup.Item>
-                <ListGroup.Item className="border-0 pl-0"><FaInstagram /></ListGroup.Item>
-                <ListGroup.Item className="border-0 pl-0"><FaXTwitter /></ListGroup.Item>
-            </ListGroup>
-    )
-}
+        <ListGroup horizontal>
+            {socialMedias.map((element, index) =>
+                renderListGroupItem({ ...element}, index)
+            )}Soc
+        </ListGroup>
+    );
+};
