@@ -7,14 +7,16 @@ export const Footer = () => {
         <footer className="mt-5">
             <Container>
                 <Row>
-                    <Col md={6}>
+                    <Col md={12}>
                         <h5>Get In Touch</h5>
                         <p>
                             I am always open to connect with everybody.
                             Whether you have a question or just want to say hi, my inbox is always open!
                         </p>
                         <p>Connect With Me!</p>
-                        <div className="w-50">
+
+
+                        <div className="w-50 d-flex flex-row justify-content-md-start">
                             <SocialMedia/>
                         </div>
                     </Col>
