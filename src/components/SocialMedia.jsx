@@ -2,9 +2,9 @@ import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 import {ListGroup} from "react-bootstrap";
 
 const socialMedias = [
-    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/uziel-carranza-charro/' },
-    { icon: <FaGithub />, link: 'https://github.com/UzielCarranza' },
-    { icon: <FaTwitter />, link: 'https://twitter.com/' }
+    { icon: <FaLinkedin style={{fontSize: "2em"}} />, link: 'https://www.linkedin.com/in/uziel-carranza-charro/' },
+    { icon: <FaGithub style={{fontSize: "2em"}}/>, link: 'https://github.com/UzielCarranza' },
+    { icon: <FaTwitter style={{fontSize: "2em"}}/>, link: 'https://twitter.com/' }
 ];
 
 const renderListGroupItem = (jsxElement, index) => (
