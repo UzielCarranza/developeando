@@ -68,11 +68,10 @@ HERO
 ABOUT
 */
 
-#about-section, #experience-section, #projects-section{
+#about-section, #experience-section, #projects-section {
     height: 100vh;
     padding-top: 2.5em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
