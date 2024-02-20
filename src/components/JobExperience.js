@@ -57,7 +57,7 @@ export const JobExperience = () => {
         }
     ];
     return (
-    <Container id={"experience-section"} >
+    <Container id={"experience-section"}>
         <Col xs={12} lg={8}>
             <Card className="bg-black text-white">
                 <Card.Body>
